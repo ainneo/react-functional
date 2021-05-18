@@ -1,4 +1,5 @@
-## I built this project to demo searching, filtering, loading, and sorting using hooks in react. 
+## Searching, Filtering, Loading, and Sorting with Hooks
+I built this project to demo searching, filtering, loading, and sorting using hooks in react. 
 ### Building the search component:
 To show some data on a list we will be using a link to an API that returns images and titles of those images from this link.
 https://jsonplaceholder.typicode.com/albums/1/photos
