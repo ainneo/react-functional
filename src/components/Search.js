@@ -1,8 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { findByLabelText } from "@testing-library/dom";
+// import { findByLabelText } from "@testing-library/dom";
 
 function Search() {
+  const container = {
+    height: "500px",
+    minWidth: "280px",
+    width: "30%",
+    textAlign: "center",
+    overflow: "scroll",
+  };
+
+  const grid = {
+    width: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+  };
+
+  const styles = {
+    flex: 1,
+    minWidth: 100,
+    width: "20%",
+    height: 50,
+    padding: 5,
+    border: "0.5px solid black",
+    margin: 5,
+    fontSize: "10px",
+  };
+
   const [allData, setAllData] = useState([]); //hold all info we retreive from json placeholder
   const [filteredData, setFilteredData] = useState(allData); //hold a copy of the first state and then second state
 
@@ -12,29 +38,9 @@ function Search() {
     let result = [];
     console.log(value);
     result = allData.filter((data) => {
-      return data.title.search(value) !== -1;
+      return data.title.search(value) !== 0;
     });
     setFilteredData(result);
-  };
-
-  const styles = {
-    display: "inline",
-    minWidth: "100px",
-    width: "20%",
-    height: 50,
-    float: "left",
-    padding: 5,
-    border: "0.5px solid black",
-    margin: 5,
-    fontSize: "10px",
-  };
-
-  const container = {
-    height: "500px",
-    minWidth: "280px",
-    width: "30%",
-    textAlign: "center",
-    overflow: "scroll",
   };
 
   useEffect(() => {
@@ -51,15 +57,15 @@ function Search() {
 
   return (
     <div style={container}>
-      <div style={{ padding: "10px" }}>
+      <div style={{ margin: "10px" }}>
         <label>Search:</label>
         <input type="text" onChange={(event) => handleSearch(event)} />
       </div>
-      <div>
+      <div style={grid}>
         {filteredData.map((value, index) => {
           return (
-            <div key={value.id}>
-              <div style={styles}>{value.title}</div>
+            <div key={value.id} style={styles}>
+              {value.title}
             </div>
           );
         })}
