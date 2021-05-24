@@ -20,7 +20,7 @@ function Search() {
 
   const styles = {
     flex: 1,
-    minWidth: 100,
+    minWidth: 80,
     width: "20%",
     height: 50,
     padding: 5,

@@ -105,7 +105,7 @@ setFilteredData(result);
 
 ## Load More Button & Infinite Scrolling when fetching data
 
-This method of pagination is useful in cases where referencing a page for later purposes is not needed. For example, social media posts, video posts and others. We will be impletmenting a load more button, infinite scrolling, using a third party API endpoint with paginated data and building our API endpoint using Node.js(Express.js) and Sequelize.js.
+This method of pagination is useful in cases where referencing a page for later purposes is not needed. For example, social media posts, video posts and others. We will be impletmenting a load more button with a mock API.
 
 ## All content is inspired by & credit is given to the authors in the articles below:
 
