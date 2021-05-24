@@ -1,30 +1,18 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 const LoadMore = () => {
   const container = {
+    border: "solid grey 1px",
     height: "500px",
     minWidth: "280px",
     width: "30%",
     textAlign: "center",
     overflow: "scroll",
+    marginBottom: 20,
   };
 
-  const grid = {
-    width: "100%",
-    display: "flex",
-    flexWrap: "wrap",
-  };
-
-  const styles = {
-    flex: 1,
-    minWidth: 100,
-    width: "20%",
-    height: 50,
-    padding: 5,
-    border: "0.5px solid black",
-    margin: 5,
-    fontSize: "10px",
+  const containerButton = {
+    padding: 20,
   };
 
   const [Items, setItems] = useState(Array.from(Array(5).keys(), (n) => n + 1));
@@ -44,8 +32,10 @@ const LoadMore = () => {
   }
   return (
     <div style={container}>
-      {isFetching && <p>Fetching items...</p>}
-      {!isFetching && <button onClick={loadMoreItems}>Load more</button>}
+      <div style={containerButton}>
+        {isFetching && <p>Fetching items...</p>}
+        {!isFetching && <button onClick={loadMoreItems}>Load more</button>}
+      </div>
       {Items.map((item, index) => {
         if (Items.length === index + 1) {
           return <div key={index}>Item {item} last</div>;

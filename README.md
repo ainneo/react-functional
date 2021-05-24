@@ -112,3 +112,5 @@ This method of pagination is useful in cases where referencing a page for later 
 - https://levelup.gitconnected.com/how-to-search-filter-through-data-in-react-26f1545fe3a1
 - https://medium.com/swlh/a-comprehensive-guide-to-load-more-button-and-infinite-scrolling-in-react-js-bd88edf74d5a
 - https://dev.to/ramonak/react-how-to-dynamically-sort-an-array-of-objects-using-the-dropdown-with-react-hooks-195p
+- https://github.com/myogeshchavan97/class-to-hooks-refactoring
+- https://www.cluemediator.com/load-more-pagination-in-react

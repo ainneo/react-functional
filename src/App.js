@@ -1,6 +1,7 @@
 import React from "react";
 import LoadMore from "./components/LoadMore";
 import Search from "./components/Search";
+import Sort from "./components/Sort";
 
 function App() {
   const container = {
@@ -13,7 +14,7 @@ function App() {
     height: 800,
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     alignItems: "center",
   };
 
@@ -29,6 +30,7 @@ function App() {
       <div style={containerComponents}>
         <Search />
         <LoadMore />
+        <Sort />
       </div>
     </div>
   );

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { findByLabelText } from "@testing-library/dom";
-// import { findByLabelText } from "@testing-library/dom";
 
 function Search() {
   const container = {
+    border: "solid grey 1px",
     height: "500px",
     minWidth: "280px",
     width: "30%",
     textAlign: "center",
     overflow: "scroll",
+    marginBottom: 20,
   };
 
   const grid = {
@@ -40,7 +40,7 @@ function Search() {
     let result = [];
     console.log(value);
     result = allData.filter((data) => {
-      return data.title.search(value) != -1;
+      return data.title.search(value) !== -1;
     });
     setFilteredData(result);
   };
