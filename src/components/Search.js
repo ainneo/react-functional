@@ -33,12 +33,14 @@ function Search() {
   const [filteredData, setFilteredData] = useState(allData); //hold a copy of the first state and then second state
 
   //onChange method of the TextInput component.
+  //within title property we are doing a search of the value that the user entered
+  //into the textbox and will return the value if it is not equal to -1
   const handleSearch = (event) => {
     let value = event.target.value.toLowerCase();
     let result = [];
     console.log(value);
     result = allData.filter((data) => {
-      return data.title.search(value) !== 0;
+      return data.title.search(value) != -1;
     });
     setFilteredData(result);
   };
